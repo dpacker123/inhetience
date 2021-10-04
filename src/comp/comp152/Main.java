@@ -13,6 +13,10 @@ public class Main {
         var sickPatient2 = new person(("Some Body"));
         var picker = new Random();
         var choice = picker.nextInt(inNetworkDoctors.size());
+        doctor doc = inNetworkDoctors.get(choice);
+        doc.treatPatient(sickPatient);
+        doc.billPatient(sickPatient);
+
 
 
     }

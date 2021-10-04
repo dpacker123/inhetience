@@ -11,6 +11,7 @@ public class doctor {
 
     public void treatPatient(person patient){
         System.out.println("Place holder for treat patient");
+        patient.getTreated();
 
 
     }
