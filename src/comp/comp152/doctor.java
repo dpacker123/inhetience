@@ -10,7 +10,7 @@ public class doctor {
     }
 
     public void treatPatient(person patient){
-        System.out.println("Place holder for treat patient");
+        System.out.println("The Doctor says take two of these and call the office in the morning");
         patient.getTreated();
 
 
@@ -23,5 +23,20 @@ public class doctor {
         if (isMedicare)
             return fee/2;
         return fee;
+    }
+    @Override
+    public String toString(){
+        return "Doctor: \nMed School: " + AlmaMater+"\nFee:" + fee;
+    }
+
+    @Override
+    public boolean equals(Object other){
+        if (!(other instanceof doctor)){
+            return false;
+
+        }
+        doctor otherDoctor = (doctor) other;
+        var isSame = this.fee == otherDoctor.fee && this.AlmaMater.equals(otherDoctor.AlmaMater);
+        return isSame;
     }
 }
